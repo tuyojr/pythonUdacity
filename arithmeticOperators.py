@@ -26,3 +26,14 @@ print(noOfTiles)
 
 # Fill this in with an expression that calculates how many tiles will be left over.
 print((6*17) - noOfTiles)
+
+
+# Which of these lines of Python code are well formatted? 
+# How would you improve the readability of the codes that 
+# don't use good formatting? (Choose all that apply)
+
+print((17 - 6)%(5 + 2))
+
+print(4/2 - 7*7)
+
+
