@@ -1,3 +1,5 @@
+# Average Electricity Bill
+
 # It's time to try a calculation in Python!
 # My electricity bills for the last three months have been 
 # $23, $32 and $64. What is the average monthly electricity 
