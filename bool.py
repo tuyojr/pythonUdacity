@@ -17,3 +17,9 @@ rio_de_janeiro_pop_density = rio_population/rio_area
 # Write code that prints True if San Francisco is denser than Rio, and False otherwise
 more_dense = san_francisco_pop_density > rio_de_janeiro_pop_density
 print(more_dense)
+
+# Another way to solve the above is using an if else statement
+if (san_francisco_pop_density > rio_de_janeiro_pop_density):
+    print (True)
+else:
+    print (False)
