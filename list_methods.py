@@ -40,4 +40,28 @@
 
 # All data structures are data types.
 
+# Lists are mutable and ordered
+
+
+
+# test your understanding of indexing and slicing lists.
+# First element of the list ===> arr[0]
+
+# Fourth element of a list ===> arr[3]
+
+# Last element of the list ===> arr[len(arr) - 1]
+
+# Second to last element of the list ===> arr[-2]
+
+
+
+# Choose the correct syntax to slice each of the following elements from the list: 
+# arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+# ['c', 'd', 'e', 'f'] ===> arr[2:6]
+
+# ['a', 'b', 'c'] ===> arr[:3]
+
+# ['e', 'f', 'g'] ===> arr[4:] OR arr arr[-3:]
+
 
