@@ -50,3 +50,20 @@ print(len(verse))
 print(verse.index("and"))
 print(verse.rfind("you"))
 print(verse.count("you"))
+
+# Another way to do this to make it look more appealing is...
+
+# Use the appropriate functions and methods to answer the questions above
+# Bonus: practice using .format() to output your answers in descriptive messages!
+
+final_output = "The verse has a length of {} characters.\nThe word 'and' \
+occurs at the {}th index in the verse.\nThe last occurrence of the word 'you' \
+was at the {}th index.\nThe word 'you' appears {} times in the verse."
+
+
+verse_length = len(verse)
+word_index = verse.index('and')
+last_index = verse.rfind('you')
+word_occur = verse.count('you')
+
+print(final_output.format(verse_length, word_index, last_index, word_occur))
