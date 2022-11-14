@@ -33,5 +33,11 @@
 # names.append("Eugenia")
 # print(sorted(names)) ===> ["Albert", "Ben", "Carol", "Donna", "Eugenia"]
 
+# True statements about data types and data structures
+# Data structures are containers that can include different data types.
+
+# A list is an example of a data structure.
+
+# All data structures are data types.
 
 
