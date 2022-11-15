@@ -165,3 +165,19 @@ print(list(range(4))) # ===> [0, 1, 2, 3]
 print(list(range(4,8))) # ===> [4, 5, 6, 7]
 print(list(range(4,10,2))) # ===> [4, 6, 8]
 print(list(range(0,-5)))  # ===> []
+
+
+
+
+
+# colors = ['Red', 'Blue', 'Green', 'Purple']
+# lower_colors = [ ]
+
+# for color in colors:
+#     #finish this part
+
+# If you want to create a new list called lower_colors, where each color 
+# in colors is lower cased, which code line should be inserted into the 
+# code block above?
+
+# lower_colors.append(color.lower())
