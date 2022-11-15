@@ -66,3 +66,23 @@ for name in names:
     usernames.append(name.lower().replace(' ', '_'))
 
 print(usernames)
+
+
+
+# Let's say instead of creating a new list, we want to modify the 
+# names list itself with the changes and write the following code. 
+# What would this do?
+
+# for name in names:
+#     name = name.lower().replace(" ", "_")
+
+# print(names)
+
+# Answer
+# The printed output for the names list will look exactly like it did 
+# in the first line. During each iteration, the name variable is set 
+# to a string taken from the list. Then the assignment statement 
+# creates a new string (name.lower().replace(" ", "_")) and changes 
+# the name variable to that string. It doesn't modify the contents 
+# of the names list at all. To modify the list you must operate on 
+# the list itself, using range, as you saw earlier.
