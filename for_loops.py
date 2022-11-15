@@ -18,6 +18,10 @@ sentence = ["the", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "do
 for word in range(len(sentence)):
     print(sentence[word])
 
+# OR
+
+for word in sentence:
+    print(word)
 
 # Practice: Multiples of 5
 # Write a for loop below that will print out every whole 
