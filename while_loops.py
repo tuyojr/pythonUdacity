@@ -31,11 +31,12 @@ while current <= number:
 
 
 # print the factorial of number
+print(product)
+
 
 # Using a for loop
 for num in range(2, number + 1):
     product *= num
 
-
-    
+# print the factorial of number
 print(product)
