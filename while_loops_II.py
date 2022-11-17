@@ -83,3 +83,11 @@ nearest_square = num**2
 
 
 print(nearest_square)
+
+
+
+
+# You need to make sure the while loop has: 
+# 1) a condition expression that will be assessed and when met, will allow you to exit the loop 
+# 2) make sure the loop is advancing 
+# 3) the value of the condition variables is changing with each iteration of the loop.
