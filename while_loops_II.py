@@ -130,3 +130,10 @@ while (odd_num_count < 5) and (list_index < len_num_list):
 
 print ("The numbers of odd numbers added are: {}".format(odd_num_count))
 print ("The sum of the odd numbers added is: {}".format(odd_sum))
+
+
+# Consider this: If the question was to identify if each number in the list is an 
+# odd or even number, then a for loop makes better sense. In that case, you need 
+# to loop through each element in the list. However, in the question above, as 
+# long as you have the sum of the first five odd numbers (the condition), you 
+# can stop going through the list and don't need to go through the rest of the elements.
