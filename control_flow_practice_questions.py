@@ -92,3 +92,9 @@ for key, value in win_count_dict.items():
 
 
 print("most_win_director = {}".format(most_win_director))
+
+
+#ALTERNATIVE SECOND PART OF SOLUTION
+highest_count = max(win_count_dict.values())
+
+most_win_director = [key for key, value in win_count_dict.items() if value == highest_count]
