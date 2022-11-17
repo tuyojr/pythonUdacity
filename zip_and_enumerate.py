@@ -59,3 +59,21 @@ data = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (9, 10, 11))
 
 data_transpose = tuple(zip(*data)) # replace with your code
 print(data_transpose)
+
+
+
+
+
+# Quiz: Enumerate
+# Use enumerate to modify the cast list so that each element contains the 
+# name followed by the character's corresponding height. For example, the 
+# first element of cast should change from "Barney Stinson" to "Barney Stinson 72".
+
+cast = ["Barney Stinson", "Robin Scherbatsky", "Ted Mosby", "Lily Aldrin", "Marshall Eriksen"]
+heights = [72, 68, 72, 66, 76]
+
+# write your for loop here
+for i, name in enumerate(cast):
+    cast[i] = name + " " + str(heights[i])
+
+print(cast)
