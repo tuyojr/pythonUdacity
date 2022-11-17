@@ -13,8 +13,14 @@ winners = {1931: ['Norman Taurog'], 1932: ['Frank Borzage'], 1933: ['Frank Lloyd
 nom_count_dict = {}
 # Add your solution code below before line 10. Add more lines for your code as needed.
 
+# First loop through the nominated dictionary
 for year, nom in nominated.items():
+
+    # Loop through the values in the nominated dictionary
     for director in nom:
+        # if the key (value of the the value of the nominated dictionary) is not in our new dictionary above
+        # add the key as a new key and set the value to 1.
+        # else, increase the value of the new key by 1 (these comments applies for the winners part of this task) 
         if director not in nom_count_dict:
             nom_count_dict[director] = 1
         else:
