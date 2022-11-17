@@ -104,16 +104,29 @@ print(nearest_square)
 num_list = [422, 136, 524, 85, 96, 719, 85, 92, 10, 17, 312, 542, 
             87, 23, 86, 191, 116, 35, 173, 45, 149, 59, 84, 69, 113, 166]
 
-count_odd = 0
-list_sum = 0
-i = 0
+# A variable to hold the number of odd numbers in the list
+odd_num_count = 0
+
+# A variable to hold the sum of the odd numbers in the list
+odd_sum = 0
+
+# A variable to keep track of where we are in the list
+list_index = 0
+
+# A variable to hold the length of the list
 len_num_list = len(num_list)
 
-while (count_odd < 5) and (i < len_num_list): 
-    if num_list[i] % 2 != 0:
-        list_sum += num_list[i]
-        count_odd += 1
-    i += 1
+# We want to keep checking while the number of odd numbers is less than 5 (required numbers we want),
+# and the index where we are is less than the length of the list. If the value at the index where we
+# are in the list does not have a remainder = 0, we want to add the value at that index to the odd_sum
+# variable and than increase our odd number count by 1. The condition keeps executing until our list_index
+# is not more than 5
 
-print ("The numbers of odd numbers added are: {}".format(count_odd))
-print ("The sum of the odd numbers added is: {}".format(list_sum))
+while (odd_num_count < 5) and (list_index < len_num_list): 
+    if num_list[list_index] % 2 != 0:
+        odd_sum += num_list[list_index]
+        odd_num_count += 1
+    list_index += 1
+
+print ("The numbers of odd numbers added are: {}".format(odd_num_count))
+print ("The sum of the odd numbers added is: {}".format(odd_sum))
