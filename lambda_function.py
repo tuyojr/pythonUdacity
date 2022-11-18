@@ -22,3 +22,18 @@ numbers = [
 
 averages = list(map(lambda num_list: sum(num_list) / len(num_list), numbers))
 print(averages)
+
+
+
+
+
+# Quiz: Lambda with Filter
+# filter() is a higher-order built-in function that takes a 
+# function and iterable as inputs and returns an iterator with 
+# the elements from the iterable for which the function returns 
+# True. The code below uses filter() to get the names in cities 
+# that are fewer than 10 characters long to create the list 
+# short_cities. Give it a test run to see what happens.
+
+# Rewrite this code to be more concise by replacing the is_short 
+# function with a lambda expression defined within the call to filter().
