@@ -64,4 +64,6 @@ def main():
     # Print an output that makes use of the first letter of the user as a reference to the created dictionary
     print("Unique flower name with the first letter {}".format(flower_d[first_letter]))
 
+
+# Call the main function
 main()
