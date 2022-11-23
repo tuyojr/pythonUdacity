@@ -8,4 +8,4 @@ if hours <= 40:
 else: 
   pay = ((hours - 40) * (1.5 * rate)) + (40 * rate)
 
-print ('Pay ='), pay
+print ('Pay = {}'.format(pay))
