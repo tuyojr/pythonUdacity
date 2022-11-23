@@ -34,6 +34,6 @@ for key, value in count_dict.items():
         num_count = value
         word_counted = key
 
-print('The most occurring word in the file is "{}" and it appeared {} times.'.format(word_counted, num_count))
+print('\nThe most occurring word in the file is "{}" and it appeared {} times.'.format(word_counted, num_count))
 
 
