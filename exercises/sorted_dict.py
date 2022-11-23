@@ -13,4 +13,4 @@ sorted_names = dict(sorted(dict_users.items(), key=lambda dict_key:dict_key))
 
 # for each key name retrieve the values from the dict
 for key, value in sorted_names.items():
-    print('PLAYER: {},\nAGE: {},\nROOM No.: {},\nEMAIL: {} \n'.format(key, value[0], value[1], value[2]))
+    print('PLAYER: {}\nAGE: {}\nROOM No.: {}\nEMAIL: {} \n'.format(key, value[0], value[1], value[2]))
