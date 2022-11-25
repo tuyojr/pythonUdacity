@@ -4,7 +4,7 @@
 # on a separate line, except backwards.
 
 value = 'Jermaine'
-index = 0
+index = -1
 
 while index < len(value):
     letter = value[index]
