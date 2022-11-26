@@ -14,7 +14,7 @@ def count(word, abc):
     for letter in word:
         if letter == abc:
             count += 1
-    return count
+    return 'In the word "{}", the letter "{}" appears {} times.'.format(word, abc, count)
 
 print(count('banana', 'a'))
         
