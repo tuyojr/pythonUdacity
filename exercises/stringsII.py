@@ -9,4 +9,4 @@
 word = 'banana'
 letter = word.count('a')
 
-print(letter)
+print('In the word "{}", the letter "a" appears {} times.'.format(word, letter))
