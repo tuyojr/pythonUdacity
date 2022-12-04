@@ -37,8 +37,10 @@ except:
 count = 0
 
 for line in f:
+    # remove the space between each new line
     line = line.rstrip()
     if line.startswith("From: "):
+        # the default arg in the split function is " ", so we want to grab the 2nd word after the first space
         sender = line.split()[1]
         count += 1
         print(sender)
