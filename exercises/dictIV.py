@@ -46,11 +46,12 @@ for line in f:
 
     # create a list of words
     words = line.split()
-    
+
     for word in words:
-        if word not in word_count:
-            word_count[word] = 1
-        else:
-            word_count[word] += 1
+        # if word not in word_count:
+        #     word_count[word] = 1
+        # else:
+        #     word_count[word] += 1
+        word_count[word] = word_count.get(word, 0) + 1
 
 print(word_count)
