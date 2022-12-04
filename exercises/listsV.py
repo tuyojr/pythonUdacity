@@ -24,3 +24,23 @@
 # cwen@iupui.edu
 # cwen@iupui.edu
 # There were 27 lines in the file with From as the first word
+
+
+file = input("Please enter a file name with it\'s correct extension:\n")
+
+try:
+    f = open(file)
+except:
+    print("Could not open '{}' file because it does not exist. Please run the program again.".format(file))
+    exit()
+
+count = 0
+
+for line in f:
+    line = line.rstrip()
+    if line.startswith("From: "):
+        sender = line.split()[1]
+        count += 1
+        print(sender)
+
+print('There were {} lines in the file with From as the first word'.format(count))
