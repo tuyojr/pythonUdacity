@@ -22,6 +22,12 @@ except:
 days = dict()
 
 for line in f:
-    line = line.rstrip()
-    if line.startswith('From:'):
-        print(line)
+    words = line.split()
+    if len(words) < 3 or words[0] != 'From:':
+        continue
+    else:
+        if words[2] not in days:
+            days[words[2]] = 1
+        else:
+            days[words[2]] += 1
+print(days)
