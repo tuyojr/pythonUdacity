@@ -12,4 +12,16 @@
 # Enter a file name: mbox-short.txt
 # {'Fri': 20, 'Thu': 6, 'Sat': 1}
 
+file_name = input('Enter the file name with a correct extension: ')
+try:
+    f = open(file_name)
+except:
+    print('File "{}" cannot be opened.'.format(file_name))
+    exit()
 
+days = dict()
+
+for line in f:
+    line = line.rstrip()
+    if line.startswith('From:'):
+        print(line)
