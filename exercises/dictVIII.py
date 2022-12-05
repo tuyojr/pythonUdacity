@@ -17,7 +17,7 @@ with open(file_name) as f:
         file_list = line.split()
         if line.startswith('From'):
             mail = file_list[1]
-            print(mail)
+            # print(mail)
             domain = mail.split('@')[1]
             if domain not in email_domain:
                 email_domain[domain] = 1
