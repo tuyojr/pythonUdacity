@@ -10,4 +10,19 @@
 # 'zqian@umich.edu': 4, 'stephen.marquard@uct.ac.za': 2,
 # 'ray@media.berkeley.edu': 1}
 
+sender = dict()
+sender_list = list()
 
+file_name = input('Enter the file name with a correct extension: ')
+
+with open(file_name) as f:
+    for line in f:
+        sender_list = line.split()
+
+        if len(sender_list) > 3 and line.startswith("From"):
+            senders = sender_list[1]
+        elif senders not in sender:
+            sender[senders] = 1
+        else:
+            sender[senders] += 1
+    print(sender)
