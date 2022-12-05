@@ -12,22 +12,17 @@
 # Enter a file name: mbox-short.txt
 # {'Fri': 20, 'Thu': 6, 'Sat': 1}
 
+days = {}
+days_list = []
 file_name = input('Enter the file name with a correct extension: ')
-try:
-    f = open(file_name)
-except:
-    print('File "{}" cannot be opened.'.format(file_name))
-    exit()
 
-days = dict()
-
-for line in f:
-    words = line.split()
-    if len(words) < 3 or words[0] != 'From:':
-        continue
-    else:
-        if words[2] not in days:
-            days[words[2]] = 1
+with open(file_name) as f:
+    for line in f:
+        days_list = line.split()
+        if len(days_list) > 3 and line.startswith('From'):
+            day = days_list[2]
+        if day not in days:
+            days[day] = 1
         else:
-            days[words[2]] += 1
-print(days)
+            days[day] += 1
+    print (days)
