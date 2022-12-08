@@ -21,3 +21,45 @@
 # 17 2
 # 18 1
 # 19 1
+
+
+file_name = input("Please enter a file name with the correct extension: ")
+
+# An empty dictionary to store our senders and amount of commits
+sender_mail = {}
+
+# An empty list to hold a tuple of our senders and their commits
+sender_list = []
+
+# A try and except block to catch a file not found error
+try:
+    f = open(file_name)
+except FileNotFoundError:
+    print('This file cannot be opened because it does not exist: ', file_name)
+    exit()
+
+# Loop through each line in the file and store them in a words list
+for line in f:
+    words = line.split()
+    if len(words) < 5 or words[0] != 'From':
+        continue
+    
+    colon = words[5].find(':')
+    hour = words[5][:colon]
+    
+    if hour not in sender_mail:
+        sender_mail[hour] = 1
+    else:
+        sender_mail[hour] += 1
+
+# next we loop through our dictionary (as a list) and append the key and value as tuple elements in
+# our new list above, the we sort this new list in a reverse order
+for key, val in list(sender_mail.items()):
+    sender_list.append((val, key))
+
+sender_list.sort()
+
+# lastly, we loop through the tuples in our reversed list, checking the value and the key
+# we print the first element from the list which should be the one with the highest commits
+for key, val in sender_list:
+    print("{} time(s) at {} HRs".format(key, val))
