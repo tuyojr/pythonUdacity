@@ -16,6 +16,6 @@ def create_file():
     # will not be accepted as a correct name for the file
     # %Y = Year, %m = month, %d = day, %H = Hour, %M = Minutes
     with open(file_name.strftime("%Y-%m-%d-%H-%M"), "w") as file:
-        file.write("This file was created on {} at {} hours.".format(file_name.strftime('%d-%m-%Y'),file_name.strftime('%H-%M')))
+        file.write("This file was created on {} at {}min(s) past {}hour(s).".format(file_name.strftime('%d-%m-%Y'),file_name.strftime('%M'),file_name.strftime('%H')))
 
 create_file()
