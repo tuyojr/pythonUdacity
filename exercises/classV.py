@@ -12,7 +12,7 @@ s.party()
 j = Football("Jim")
 j.party()
 j.six()
-print(dir(j))
+# print(dir(j))
 
 # Code: http://www.py4e.com/code3/party6.py
 # Or select Download from this trinket's left-hand menu
