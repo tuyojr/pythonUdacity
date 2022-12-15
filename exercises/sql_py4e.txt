@@ -6,8 +6,10 @@ Download and Install: http://sqlitebrowser.org/
 
 Single Table SQL
 
+# this creates a table named user with columns named 'name' and 'email', and accept a text as values
 CREATE TABLE "Users" ("name" TEXT, "email" TEXT)
 
+# this populates our table with data. to run all the commands at once, append a ';' at the end of each statement
 INSERT INTO Users (name, email) VALUES ('Chuck', 'csev@umich.edu')
 INSERT INTO Users (name, email) VALUES ('Colleen', 'cvl@umich.edu')
 INSERT INTO Users (name, email) VALUES ('Ted', 'ted@umich.edu')
@@ -15,20 +17,28 @@ INSERT INTO Users (name, email) VALUES ('Sally', 'a1@umich.edu')
 INSERT INTO Users (name, email) VALUES ('Ted', 'ted@umich.edu')
 INSERT INTO Users (name, email) VALUES ('Kristen', 'kf@umich.edu')
 
+# this tells sql to remove data at a particular place 
 DELETE FROM Users WHERE email='ted@umich.edu'
 
+# this updates a particular data
 UPDATE Users SET name="Charles" WHERE email='csev@umich.edu'
 
+# * means all columns
+# select all columns from a particular table
 SELECT * FROM Users
 
+# selects all data from the table where the column 'email' that has a particular value
 SELECT * FROM Users WHERE email='csev@umich.edu'
 
+# selects all data from the table and orders them by the ascending/alphabetically value in the column 'email'
 SELECT * FROM Users ORDER BY email
 
 SELECT * FROM Users ORDER BY name DESC
 
 Multi-Table SQL:
 
+# creates a table ans sets an 'id' as an integer that is auto incremented and not allowed to be null/empty
+# it should be unique also. it also creates a 'name' field that accepts text
 CREATE TABLE "Artist" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, 
     "name" TEXT)
@@ -47,8 +57,9 @@ CREATE TABLE "Track" (
     album_id INTEGER, genre_id INTEGER, len INTEGER, rating INTEGER, 
     "title" TEXT, "count" INTEGER)
 
-INSERT INTO Artist (name) VALUES ('Led Zepplin')
-INSERT INTO Artist (name) VALUES ('AC/DC')
+# inserts data into the Artist table. since it is auto incremented, it updates the 'id' for us
+INSERT INTO Artist (name) VALUES ('Led Zepplin') # id = 1 because of auto increment
+INSERT INTO Artist (name) VALUES ('AC/DC') # id = 2 because of auto increment
 
 INSERT INTO Genre (name) VALUES ('Rock') ;
 INSERT INTO Genre (name) VALUES ('Metal');
@@ -65,12 +76,18 @@ INSERT INTO Track (title, rating, len, count, album_id, genre_id)
 INSERT INTO Track (title, rating, len, count, album_id, genre_id) 
     VALUES ('Who Made Who', 5, 207, 0, 1, 2) ;
 
+# JOIN operation links across several tables as part of a SELECT operation
+# you must tell the JOIN how to use the keys that make the connection between
+# the tables using an ON clause.
+# SELECT table1.field FROM table1 JOIN table2 ON table1.field = table2.field
+
 SELECT Album.title, Artist.name FROM Album JOIN Artist 
     ON Album.artist_id = Artist.id
 
 SELECT Album.title, Album.artist_id, Artist.id, Artist.name 
     FROM Album JOIN Artist ON Album.artist_id = Artist.id
 
+# There's no ON clause, so it returns all possible combinations
 SELECT Track.title, Track.genre_id, Genre.id, Genre.name 
     FROM Track JOIN Genre   
 

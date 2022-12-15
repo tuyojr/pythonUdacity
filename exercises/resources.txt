@@ -1,2 +1,8 @@
 github: https://github.com/jmelahman/python-for-everybody-solutions
 trinket_book: https://books.trinket.io/pfe/index.html
+
+RDS Email: https://www.youtube.com/watch?v=uQ3Qv1z_Vao
+RDS Roster: https://www.youtube.com/watch?v=qEkUEAz8j3o
+RDS Tracks: https://www.youtube.com/watch?v=I-E7avcPeSE
+RDS Twfriends: https://www.youtube.com/watch?v=RZRAoBFIH6A
+RDS Twspider: https://www.youtube.com/watch?v=xBaJddvJL4A
