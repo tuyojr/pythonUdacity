@@ -1,4 +1,5 @@
+-- CREATE TABLE "Users" ("name" TEXT, "email" TEXT)
 CREATE TABLE "Users" (
-	"Name"	TEXT,
-	"Email"	TEXT
+	"name"	TEXT,
+	"email"	TEXT
 );
