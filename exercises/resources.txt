@@ -1,0 +1,2 @@
+github: https://github.com/jmelahman/python-for-everybody-solutions
+trinket_book: https://books.trinket.io/pfe/index.html
