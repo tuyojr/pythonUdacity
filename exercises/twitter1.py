@@ -2,6 +2,7 @@ import urllib.request, urllib.parse, urllib.error
 import twurl
 import ssl
 
+# https://www.youtube.com/watch?v=2c7YwhvpCro (explanation)
 # https://apps.twitter.com/
 # Create App and get the four strings, put them in hidden.py
 
